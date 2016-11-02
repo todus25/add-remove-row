@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+      <head>
+       <title>add remove</title>
+     <style>
+	 
+	 .button{background:red;
+	        height:1cm;
+			width:3cm;}
+	 
+	 
+	 
+	 </style>
+
+         </head>
+		 
+		 
+		 
+<body>
+
+
+     
+		<button class="button" onclick="add();">
+	ADD MORE ROW
+		</button>
+		
+		<div class="d">
+		<input id="w" type="text" placeholder="date">
+		<input id="i" type="text" placeholder="kg of material">
+		<button id="t"> REMOVE</button>
+		</div>
+		
+	 
+	
+	 
+	    
+		
+<script>
+function add(){var btn = document.createElement("div");
+
+var v = document.createElement("input");
+var u = document.createElement("input");
+var t = document.createElement("button");
+
+                // var sheet = document.createElement('style')
+//sheet.innerHTML = "input{border:2px solid red; margin-right:.5cm; background:red;}" ;//eta dile notun style suru hobe 
+//sheet.innerHTML = "button{height:1cm;width:2cm;}" ;
+//btn.appendChild(sheet);
+    v.style.cssText="margin-right:.1cm";
+	v.setAttribute("placeholder", "kg of material");
+    u.style.cssText="margin-right:.1cm";
+	u.setAttribute("placeholder", "date");//html er property te jawa jay
+    t.style.cssText="height:.6cm;width:2cm;";
+	var x = document.createTextNode("REMOVE"); 
+	t.appendChild(x);
+    
+    btn.appendChild(u);
+    btn.appendChild(v);
+	btn.appendChild(t);
+    document.body.appendChild(btn); 
+    } 
+</script>
+</body>
+</html>
