@@ -8,7 +8,7 @@
 	        height:1cm;
 			width:3cm;}
 	 
-	 
+	
 	 
 	 </style>
 
@@ -19,7 +19,7 @@
 <body>
 
 
-     
+
 		<button class="button" onclick="add();">
 	ADD MORE ROW
 		</button>
@@ -31,11 +31,92 @@
 		</div>
 		
 	 
-	
-	 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	    
 		
 <script>
+
+
+/*
+
+     
+	
+	 <button id="addbutton"  >
+	      ADD MORE ROW
+		</button>
+<div id="container">		
+		<div  >
+		<input type="text" placeholder="date">
+		<input  type="text" placeholder="kg of material">
+		<button> REMOVE</button>
+		</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+var i=1;
+// add content function
+document.getElementById("addbutton").addEventListener('click',function(){
+
+if(i<5){
+i++;
+var appendData='<div id="con'+i+'"> <input id="w" type="text" placeholder="date"> <input id="i" type="text" placeholder="kg of material"> <button onclick="removetag('+i+')"> REMOVE</button></div>';
+var appendarea=document.getElementById("container");
+ jsappend(appendarea,appendData);
+
+}else{alert('Max 5 ');}
+});
+
+// Remove function
+function removetag(id){
+i--;
+ 
+document.getElementById("con"+id).remove();
+}
+
+
+//Append data as html in javascript
+function jsappend(el, htmldata) {
+  var div = document.createElement('div');
+  div.innerHTML = htmldata;
+  while (div.children.length > 0) {
+    el.appendChild(div.children[0]);
+  }
+}
+
+
+*/
+
+function re(x){x.style="display:none";};
 function add(){var btn = document.createElement("div");
 
 var v = document.createElement("input");
@@ -51,6 +132,14 @@ var t = document.createElement("button");
     u.style.cssText="margin-right:.1cm";
 	u.setAttribute("placeholder", "date");//html er property te jawa jay
     t.style.cssText="height:.6cm;width:2cm;";
+	t.addEventListener('click',function(){ var b=this.parentNode.style.cssText="display:none";});
+	                                            //re(b);});
+	//b.style.cssText="display:none";});
+	//t.addEventlistener.('click',function(){
+	//this.style.cssText="background:black";
+//});
+   //btn.addEventListener('click',function (){this.style.cssText="display:none";});
+	
 	var x = document.createTextNode("REMOVE"); 
 	t.appendChild(x);
     
